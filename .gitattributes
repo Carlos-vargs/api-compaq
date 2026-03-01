@@ -1,0 +1,18 @@
+# Ensure consistent line endings
+* text=auto eol=lf
+
+# Treat Markdown and docs as text
+*.md text
+docs/** text
+
+# Treat shell scripts as text
+*.sh text eol=lf
+
+# Treat JS/JSON as text
+*.js text eol=lf
+*.json text eol=lf
+
+# Treat configuration files as text
+*.env text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
