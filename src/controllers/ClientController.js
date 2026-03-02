@@ -1,4 +1,4 @@
-const AdmClienteService = require("../services/AdmClientService.js");
+const Client = require("../services/ClientService.js");
 
 /**
  * REST controller to get paginated clients.
@@ -6,11 +6,11 @@ const AdmClienteService = require("../services/AdmClientService.js");
  * @param {import('express').Response} res
  * @param {Function} next
  */
-exports.getClients = async (req, res, next) => {
+exports.index = async (req, res, next) => {
   try {
     const page = parseInt(req.query.page, 10) || 1;
     const perPage = parseInt(req.query.per_page, 10) || 15;
-    const result = await AdmClienteService.getPaginatedClients(page, perPage);
+    const result = await Client.paginate(page, perPage);
     res.json(result);
   } catch (err) {
     next(err);

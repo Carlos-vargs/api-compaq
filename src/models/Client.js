@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/database.js");
 
-const AdmClient = sequelize.define(
+const Client = sequelize.define(
   "AdmCliente",
   {
     CIDCLIENTEPROVEEDOR: {
@@ -506,4 +506,4 @@ const AdmClient = sequelize.define(
   },
 );
 
-module.exports = AdmClient;
+module.exports = Client;
