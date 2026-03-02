@@ -45,6 +45,18 @@ Guía para mantener la coherencia y calidad en futuras contribuciones automátic
 - **SOLID y DRY:** Mantén la separación de responsabilidades y evita duplicidad de código.
 - **Testing:** Todo endpoint nuevo debe tener su test correspondiente en la carpeta `tests/`.
 
+## 7. Convenciones tipo Laravel
+
+- **Estructura y nombres:** Cuando crees nuevos controladores, modelos, servicios y rutas, sigue la estructura y convenciones de Laravel:
+  - El nombre de los archivos debe ser en inglés y en singular (por ejemplo, `Document.js`, `DocumentController.js`, `DocumentService.js`, `document.js` en rutas), sin prefijos como `Adm` aunque la tabla se llame `admDocumentos`.
+  - Los métodos en los servicios y controladores deben ser similares a los de Laravel: `index`, `store`, `update`, `destroy`, etc.
+  - Los nombres de los campos y de la tabla pueden permanecer en español si ya existen y no se pueden cambiar.
+  - Los endpoints y lógica deben reflejar la estructura RESTful de Laravel.
+  - Ejemplo: para la tabla `admDocumentos`, los archivos serán `Document.js`, `DocumentController.js`, `DocumentService.js`, y la ruta `/document`.
+  - En los servicios, usa métodos como `paginate` para paginación, igual que en Laravel.
+
+**Resumen:** Usa nombres en inglés y singular para archivos y clases, métodos tipo Laravel, solo los campos y tablas en español si ya existen.
+
 ---
 
 **Resumen:** Mantén JavaScript puro con CommonJS, documenta todo con JSDoc, maneja errores vía middleware global, respeta la estructura de carpetas y realiza validaciones manuales. Ubica cada nuevo archivo en la carpeta correspondiente según su función.
